@@ -29,6 +29,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 "Plugin 'Lokaltog/vim-powerline'
 Plugin 'Rykka/colorv.vim'
 Plugin 'bling/vim-airline'
+Plugin 'mattn/calendar-vim'
 
 " Commands
 Plugin 'scrooloose/nerdcommenter'
