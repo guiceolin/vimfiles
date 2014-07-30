@@ -40,10 +40,11 @@ Plugin 'itspriddle/vim-stripper'
 " Automatic Helpers
 Plugin 'Raimondi/delimitMate'
 Plugin 'scrooloose/syntastic'
-Plugin 'ervandew/supertab'
+Plugin 'Shougo/neocomplete.vim'
 
 " Snippets
-Plugin 'garbas/vim-snipmate'
+Plugin 'Shougo/neosnippet'
+Plugin 'Shougo/neosnippet-snippets'
 Plugin 'honza/vim-snippets'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 
