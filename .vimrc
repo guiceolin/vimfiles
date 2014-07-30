@@ -22,11 +22,13 @@ Plugin 'mattboehm/vim-accordion'
 
 " TMUX
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'edkolev/tmuxline.vim'
 
 " UI Additions
 Plugin 'nathanaelkane/vim-indent-guides'
 "Plugin 'Lokaltog/vim-powerline'
 Plugin 'Rykka/colorv.vim'
+Plugin 'bling/vim-airline'
 
 " Commands
 Plugin 'scrooloose/nerdcommenter'
