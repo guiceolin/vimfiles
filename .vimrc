@@ -15,7 +15,6 @@ Plugin 'gmarik/vundle'
 
 " Navigation
 Plugin 'ZoomWin'
-"Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlp.vim'
 Plugin 'mattboehm/vim-accordion'
@@ -26,7 +25,6 @@ Plugin 'edkolev/tmuxline.vim'
 
 " UI Additions
 Plugin 'nathanaelkane/vim-indent-guides'
-"Plugin 'Lokaltog/vim-powerline'
 Plugin 'Rykka/colorv.vim'
 Plugin 'bling/vim-airline'
 Plugin 'mattn/calendar-vim'
