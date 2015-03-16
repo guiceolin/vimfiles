@@ -64,6 +64,9 @@ Plugin 'rainerborene/vim-reek'
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 
+" HTML
+Plugin 'othree/html5.vim'
+
 " JavaScript
 Plugin 'pangloss/vim-javascript'
 Plugin 'kchmck/vim-coffee-script'
