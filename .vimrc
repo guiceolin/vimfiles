@@ -35,6 +35,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 Plugin 'mileszs/ack.vim'
 Plugin 'itspriddle/vim-stripper'
+Plugin 'gorkunov/smartpairs.vim'
 
 " Automatic Helpers
 Plugin 'Raimondi/delimitMate'
