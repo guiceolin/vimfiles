@@ -92,6 +92,9 @@ Plugin 'edsono/vim-matchit'
 Plugin 'tomtom/tlib_vim'
 Plugin 'mathml.vim'
 
+Plugin 'mattn/webapi-vim'
+Plugin 'mattn/gist-vim'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
