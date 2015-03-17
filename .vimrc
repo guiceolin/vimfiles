@@ -38,6 +38,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'mileszs/ack.vim'
 Plugin 'itspriddle/vim-stripper'
 Plugin 'gorkunov/smartpairs.vim'
+Plugin 'gundo'
 
 " Automatic Helpers
 Plugin 'Raimondi/delimitMate'
@@ -550,3 +551,7 @@ let g:vimshell_force_overwrite_statusline = 0
 " Tagbar
 
 nmap <Leader>l :TagbarToggle<CR>
+
+"GUndo
+nmap  <Leader>u :GundoToggle<CR>
+
