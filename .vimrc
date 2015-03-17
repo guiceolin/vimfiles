@@ -38,6 +38,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'mileszs/ack.vim'
 Plugin 'itspriddle/vim-stripper'
 Plugin 'gorkunov/smartpairs.vim'
+Plugin 'Shougo/unite.vim'
 Plugin 'gundo'
 
 " Automatic Helpers
