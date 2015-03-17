@@ -18,6 +18,7 @@ Plugin 'ZoomWin'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlp.vim'
 Plugin 'mattboehm/vim-accordion'
+Plugin 'majutsushi/tagbar'
 
 " TMUX
 Plugin 'christoomey/vim-tmux-navigator'
@@ -545,3 +546,7 @@ endfunction
 let g:unite_force_overwrite_statusline = 0
 let g:vimfiler_force_overwrite_statusline = 0
 let g:vimshell_force_overwrite_statusline = 0
+
+" Tagbar
+
+nmap <Leader>l :TagbarToggle<CR>
