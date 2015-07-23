@@ -87,6 +87,7 @@ Plugin 'hallison/vim-markdown'
 Plugin 'groenewege/vim-less'
 Plugin 'tsaleh/vim-tmux'
 Plugin 'rodjek/vim-puppet'
+Plugin 'chase/vim-ansible-yaml'
 
 
 " Libraries
