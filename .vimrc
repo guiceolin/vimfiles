@@ -184,7 +184,7 @@ set hidden
 if has("gui_running")
     "tell the term has 256 colors
     set t_Co=256
-    colorscheme railscasts
+    colorscheme solarized
     set guitablabel=%M%t
     set lines=40
     set columns=115
@@ -195,14 +195,14 @@ else
     "dont load csapprox if there is no gui support - silences an annoying warning
     let g:CSApprox_loaded = 1
 
-    "set railscasts colorscheme when running vim in gnome terminal
+    "set solarized colorscheme when running vim in gnome terminal
     if $COLORTERM == 'gnome-terminal'
         set term=gnome-256color
-        colorscheme railscasts
+        colorscheme solarized
         set guifont=Menlo\ for\ Powerline:h14
     else
         set term=xterm-256color
-        colorscheme railscasts
+        colorscheme solarized
     endif
 endif
 
@@ -423,7 +423,7 @@ endif
 
 "LIGHT LINE
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'solarized',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], ['ctrlpmark'] ],
       \   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
