@@ -35,6 +35,7 @@ Plugin 'Rykka/colorv.vim'
 Plugin 'mattn/calendar-vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'airblade/vim-gitgutter'
 
 " Commands
 Plugin 'scrooloose/nerdcommenter'
