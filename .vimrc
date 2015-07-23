@@ -13,6 +13,10 @@ call vundle#begin()
 " required!
 Plugin 'gmarik/vundle'
 
+"Icons
+"Must load BEFORE nerdtree
+Plugin 'ryanoasis/vim-devicons'
+
 " Navigation
 Plugin 'ZoomWin'
 Plugin 'scrooloose/nerdtree'
@@ -31,7 +35,6 @@ Plugin 'bling/vim-airline'
 Plugin 'mattn/calendar-vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'ryanoasis/vim-devicons'
 
 " Commands
 Plugin 'scrooloose/nerdcommenter'
@@ -558,4 +561,8 @@ nmap <Leader>l :TagbarToggle<CR>
 
 "GUndo
 nmap  <Leader>u :GundoToggle<CR>
+
+" Icons Config
+let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 
