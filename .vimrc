@@ -31,6 +31,7 @@ Plugin 'bling/vim-airline'
 Plugin 'mattn/calendar-vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'ryanoasis/vim-devicons'
 
 " Commands
 Plugin 'scrooloose/nerdcommenter'
