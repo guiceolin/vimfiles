@@ -32,7 +32,6 @@ Plugin 'christoomey/vim-tmux-navigator'
 " UI Additions
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'Rykka/colorv.vim'
-Plugin 'bling/vim-airline'
 Plugin 'mattn/calendar-vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'altercation/vim-colors-solarized'
