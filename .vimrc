@@ -236,7 +236,7 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$|\v[\/]vendor[\/]cache[\/]|\v[\/]node_modules[\/]',
   \ 'file': '\v.(swo)$',
   \ }
-let g:ctrlp_max_files=20000
+let g:ctrlp_max_files=50000
 
 "map Q to something useful
 noremap Q gq
