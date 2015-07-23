@@ -20,6 +20,7 @@ Plugin 'ryanoasis/vim-devicons'
 " Navigation
 Plugin 'ZoomWin'
 Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'ctrlp.vim'
 Plugin 'mattboehm/vim-accordion'
 Plugin 'majutsushi/tagbar'
@@ -561,6 +562,9 @@ nmap <Leader>l :TagbarToggle<CR>
 
 "GUndo
 nmap  <Leader>u :GundoToggle<CR>
+
+" git-nerdtree icons
+let g:webdevicons_enable_nerdtree = 1
 
 " Icons Config
 let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
