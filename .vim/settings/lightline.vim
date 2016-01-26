@@ -1,5 +1,8 @@
 let g:lightline = {
       \ 'colorscheme': 'solarized',
+      \ 'inactive': {
+      \   'left': [ [ 'fugitive', 'filename' ] ],
+      \ },
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'fugitive', 'filename' ] ],
@@ -11,6 +14,7 @@ let g:lightline = {
       \   'fugitive': 'LightlineFugitive',
       \   'mode': 'LightlineMode',
       \   'filename': 'LightlineFilename',
+      \   'fullfilename': 'LightLineFullFilename',
       \ },
       \ 'separator': { 'left': '', 'right': '' },
       \ 'subseparator': { 'left': '', 'right': '' }
@@ -29,7 +33,7 @@ function! LightlineFugitive()
 endfunction"
 
 function! LightlineFilename()
-  let fname = expand('%:t')
+  let fname = expand('%')
   return fname == '__Tagbar__' ? g:lightline.fname :
         \ fname =~ '__Gundo\|NERD_tree' ? '' :
         \ &ft == 'vimfiler' ? vimfiler#get_status_string() :
@@ -73,7 +77,3 @@ function! TagbarStatusFunc(current, sort, fname, ...) abort
   let g:lightline.fname = a:fname
   return lightline#statusline(0)
 endfunction
-
-
-
-
