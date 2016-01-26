@@ -82,6 +82,9 @@ Plugin 'leshill/vim-json'
 Plugin 'itspriddle/vim-jquery'
 Plugin 'nono/vim-handlebars'
 Plugin 'digitaltoad/vim-jade'
+Plugin 'clacl/jasmine.vim'
+Plugin 'isRuslan/vim-es6'
+Plugin 'mxw/vim-jsx'
 
 " Other Languages
 Plugin 'ChrisYip/Better-CSS-Syntax-for-Vim'
