@@ -58,6 +58,7 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'slim-template/vim-slim'
 
 " Ruby
+Plugin 'ngmy/vim-rubocop'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-rails'
