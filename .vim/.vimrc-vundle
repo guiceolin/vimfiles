@@ -11,7 +11,7 @@ Plugin 'gmarik/vundle'
 Plugin 'ryanoasis/vim-devicons'
 
 " Navigation
-Plugin 'ZoomWin'
+Plugin 'regedarek/ZoomWin'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'ctrlp.vim'
