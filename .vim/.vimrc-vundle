@@ -4,7 +4,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle
 " required!
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/vundle.vim'
 
 "Icons
 "Must load BEFORE nerdtree
@@ -16,18 +16,18 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'ctrlp.vim'
 Plugin 'FelikZ/ctrlp-py-matcher'
-Plugin 'mattboehm/vim-accordion'
-Plugin 'majutsushi/tagbar'
+"Plugin 'mattboehm/vim-accordion'
+"Plugin 'majutsushi/tagbar'
 Plugin 'terryma/vim-multiple-cursors'
 
 " TMUX
-Plugin 'christoomey/vim-tmux-navigator'
+"Plugin 'christoomey/vim-tmux-navigator'
 "Plugin 'edkolev/tmuxline.vim'
-
+"
 " UI Additions
-Plugin 'nathanaelkane/vim-indent-guides'
+"Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'Rykka/colorv.vim'
-Plugin 'mattn/calendar-vim'
+"Plugin 'mattn/calendar-vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'airblade/vim-gitgutter'
@@ -36,11 +36,11 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
-Plugin 'mileszs/ack.vim'
-Plugin 'itspriddle/vim-stripper'
+"Plugin 'mileszs/ack.vim'
+"Plugin 'itspriddle/vim-stripper'
 Plugin 'gorkunov/smartpairs.vim'
-Plugin 'Shougo/unite.vim'
-Plugin 'gundo'
+"Plugin 'Shougo/unite.vim'
+"Plugin 'gundo'
 
 " Automatic Helpers
 Plugin 'Raimondi/delimitMate'
@@ -50,12 +50,13 @@ Plugin 'scrooloose/syntastic'
 " Snippets
 Plugin 'Shougo/neocomplete'
 Plugin 'Shougo/neosnippet'
+Plugin 'Shougo/neosnippet-snippets'
 Plugin 'honza/vim-snippets'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 
 " Language Additions
 " SLIM
-Plugin 'slim-template/vim-slim'
+"Plugin 'slim-template/vim-slim'
 
 " Ruby
 Plugin 'ngmy/vim-rubocop'
@@ -68,6 +69,7 @@ Plugin 'nanki/treetop.vim'
 Plugin 'rainerborene/vim-reek'
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'nelstrom/vim-textobj-rubyblock'
+Plugin 'https://github.com/gorodinskiy/vim-coloresque.git'
 
 "Elixir
 Plugin 'elixir-lang/vim-elixir'
@@ -105,6 +107,8 @@ Plugin 'mathml.vim'
 
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
+
+Plugin 'shime/vim-livedown'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
