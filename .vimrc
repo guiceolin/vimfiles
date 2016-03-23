@@ -1,27 +1,32 @@
-"showing statusline
 set laststatus=2
-
-"Use Vim settings, rather then Vi settings (much better!).
-"This must be first, because it changes other options as a side effect.
 set nocompatible
-filetype off
 
+"Load Plugins
+filetype off
 source ~/.vim/.vimrc-vundle
 
-"allow backspacing over everything in insert mode
 set backspace=indent,eol,start
-
-"store lots of :cmdline history
 set history=1000
 
+"Visuals
 set showcmd     "show incomplete cmds down the bottom
 
 set incsearch   "find the next match as we type the search
 set hlsearch    "hilight searches by default
 
 set number      "add line numbers
+set linespace=4
 set showbreak=...
 set wrap linebreak nolist
+
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set smartindent
+set autoindent
+
+"Maps
+nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
 
 "mapping for command key to map navigation thru display lines instead
 "of just numbered lines
@@ -35,25 +40,13 @@ nmap <D-k> gk
 nmap <D-4> g$
 nmap <D-6> g^
 nmap <D-0> g^
+nmap <Down> gj
+nmap <Up> gk
 
 "add some line space for easy reading
-set linespace=4
 
 "disable visual bell
 set visualbell t_vb=
-
-"try to make possible to navigate within lines of wrapped lines
-nmap <Down> gj
-nmap <Up> gk
-set fo=l
-"turn off needless toolbar on gvim/mvim
-set guioptions-=T
-
-"indent settings
-set shiftwidth=2
-set softtabstop=2
-set expandtab
-set autoindent
 
 "folding settings
 set foldmethod=indent   "fold based on indent
@@ -86,30 +79,12 @@ set ttymouse=xterm2
 set hidden
 
 """"""""""""""" INTERFACE CONFIG """"""""""""""""
-if has("gui_running")
-    "tell the term has 256 colors
-    set t_Co=256
-    colorscheme solarized
-    set guitablabel=%M%t
-    set lines=40
-    set columns=115
-    if has("gui_mac") || has("gui_macvim")
-        set guifont=Menlo:h14
-    endif
-else
-    "dont load csapprox if there is no gui support - silences an annoying warning
-    let g:CSApprox_loaded = 1
+let g:CSApprox_loaded = 1
 
-    "set solarized colorscheme when running vim in gnome terminal
-    if $COLORTERM == 'gnome-terminal'
-        set term=gnome-256color
-        colorscheme solarized
-        set guifont=Menlo\ for\ Powerline:h14
-    else
-        set term=xterm-256color
-        colorscheme solarized
-    endif
-endif
+"set solarized colorscheme when running vim in gnome terminal
+set term=gnome-256color
+colorscheme solarized
+set guifont=Menlo\ for\ Powerline:h14
 
 """"""""""""""""" SHORTCUTS """""""""""""""""
 "key mapping for window navigation
@@ -119,17 +94,7 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 "key mapping for saving file
-nmap <C-s> :w<CR>
-
-"key mapping for tab navigation
-nmap <Tab> gt
-nmap <S-Tab> gT
-
 silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
-
-"make <c-l> clear the highlight as well as redraw
-nnoremap <C-L> :nohls<CR><C-L>
-inoremap <C-L> <C-O>:nohls<CR>
 
 "map to Ctrolp buffer explore
 nnoremap <leader>b :CtrlPBuffer<cr>
@@ -176,17 +141,6 @@ map <A-k> :cprevious<CR>
 "key mapping for Gundo
 nnoremap <F4> :GundoToggle<CR>
 
-"visual search mappings
-function! s:VSetSearch()
-    let temp = @@
-    norm! gvy
-    let @/ = '\V' . substitute(escape(@@, '\'), '\n', '\\n', 'g')
-    let @@ = temp
-endfunction
-vnoremap * :<C-u>call <SID>VSetSearch()<CR>//<CR>
-vnoremap # :<C-u>call <SID>VSetSearch()<CR>??<CR>
-
-
 "jump to last cursor position when opening a file
 "dont do it when writing a commit log entry
 autocmd BufReadPost * call SetCursorPosition()
@@ -199,34 +153,7 @@ function! SetCursorPosition()
     end
 endfunction
 
-"define :HighlightLongLines command to highlight the offending parts of
-"lines that are longer than the specified length (defaulting to 80)
-command! -nargs=? HighlightLongLines call s:HighlightLongLines('<args>')
-function! s:HighlightLongLines(width)
-    let targetWidth = a:width != '' ? a:width : 79
-    if targetWidth > 0
-        exec 'match Todo /\%>' . (targetWidth) . 'v/'
-    else
-        echomsg "Usage: HighlightLongLines [natural number]"
-    endif
-endfunction
-
-" Strip trailing whitespace
-function! <SID>StripTrailingWhitespaces()
-    " Preparation: save last search, and cursor position.
-    let _s=@/
-    let l = line(".")
-    let c = col(".")
-    " Do the business:
-    %s/\s\+$//e
-    " Clean up: restore previous search history, and cursor position
-    let @/=_s
-    call cursor(l, c)
-endfunction
-autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
-
-
-let ScreenShot = {'Icon':0, 'Credits':0, 'force_background':'#FFFFFF'}
+autocmd BufWritePre * :%s/\s\+$//e
 
 "Lightline
 source ~/.vim/settings/lightline.vim
@@ -247,13 +174,6 @@ endfunction
 let g:unite_force_overwrite_statusline = 0
 let g:vimfiler_force_overwrite_statusline = 0
 let g:vimshell_force_overwrite_statusline = 0
-
-" Tagbar
-
-nmap <Leader>l :TagbarToggle<CR>
-
-"GUndo
-nmap  <Leader>u :GundoToggle<CR>
 
 " git-nerdtree icons
 let g:webdevicons_enable_nerdtree = 1
