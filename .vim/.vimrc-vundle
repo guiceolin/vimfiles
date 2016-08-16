@@ -110,6 +110,10 @@ Plugin 'mattn/gist-vim'
 
 Plugin 'shime/vim-livedown'
 
+" Block Objects
+Plugin 'argtextobj.vim'
+Plugin 'michaeljsmith/vim-indent-object'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
