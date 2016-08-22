@@ -83,7 +83,7 @@ let g:CSApprox_loaded = 1
 
 "set solarized colorscheme when running vim in gnome terminal
 set term=gnome-256color
-colorscheme solarized
+silent! colorscheme solarized
 set guifont=Menlo\ for\ Powerline:h14
 
 """"""""""""""""" SHORTCUTS """""""""""""""""
