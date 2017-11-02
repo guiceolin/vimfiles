@@ -92,10 +92,6 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-"key mapping for saving file
-silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
-
-
 "map Q to something useful
 noremap Q gq
 
@@ -130,16 +126,9 @@ endfunction
 
 autocmd BufWritePre * :%s/\s\+$//e
 
-let g:unite_force_overwrite_statusline = 0
-let g:vimfiler_force_overwrite_statusline = 0
-let g:vimshell_force_overwrite_statusline = 0
-
-" git-nerdtree icons
-let g:webdevicons_enable_nerdtree = 1
-
-" Icons Config
-let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
-let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+"let g:unite_force_overwrite_statusline = 0
+"let g:vimfiler_force_overwrite_statusline = 0
+"let g:vimshell_force_overwrite_statusline = 0
 
 " AUTO set paste MODE
 " https://coderwall.com/p/if9mda/automatically-set-paste-mode-in-vim-when-pasting-in-insert-mode
