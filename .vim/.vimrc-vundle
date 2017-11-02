@@ -46,9 +46,7 @@ Plugin 'gorkunov/smartpairs.vim'
 
 " Automatic Helpers
 Plugin 'Raimondi/delimitMate'
-Plugin 'scrooloose/syntastic'
-"Plugin 'ervandew/supertab'
-Plugin 'gcorne/vim-sass-lint'
+Plugin 'w0rp/ale'
 
 " Snippets
 Plugin 'Shougo/neocomplete'

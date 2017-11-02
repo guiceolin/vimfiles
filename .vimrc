@@ -131,9 +131,6 @@ inoremap <M-o>       <Esc>o
 inoremap <C-j>       <Down>
 let g:ragtag_global_maps = 1
 
-"mark syntax errors with :signs
-let g:syntastic_enable_signs=1
-
 "key mapping for vimgrep result navigation
 map <A-o> :copen<CR>
 map <A-q> :cclose<CR>
@@ -157,24 +154,6 @@ endfunction
 
 autocmd BufWritePre * :%s/\s\+$//e
 
-"Lightline
-source ~/.vim/settings/lightline.vim
-"NeoComplete
-source ~/.vim/settings/neocomplete.vim
-" NeoSnippets
-source ~/.vim/settings/neosnippets.vim
-
-source ~/.vim/settings/fzf.vim
-
-augroup AutoSyntastic
-  autocmd!
-  autocmd BufWritePost *.c,*.cpp call s:syntastic()
-augroup END
-
-function! s:syntastic()
-  SyntasticCheck
-endfunction
-
 let g:unite_force_overwrite_statusline = 0
 let g:vimfiler_force_overwrite_statusline = 0
 let g:vimshell_force_overwrite_statusline = 0
@@ -186,11 +165,27 @@ let g:webdevicons_enable_nerdtree = 1
 let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 
-" Syntastic
-let g:syntastic_javascript_checkers=['eslint']
-let g:syntastic_ruby_checkers=['rubocop', 'reek', 'mri']
+" AUTO set paste MODE
+" https://coderwall.com/p/if9mda/automatically-set-paste-mode-in-vim-when-pasting-in-insert-mode
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+function! WrapForTmux(s)
+  if !exists('$TMUX')
+    return a:s
+  endif
+
+  let tmux_start = "\<Esc>Ptmux;"
+  let tmux_end = "\<Esc>\\"
+
+  return tmux_start . substitute(a:s, "\<Esc>", "\<Esc>\<Esc>", 'g') . tmux_end
+endfunction
+
+let &t_SI .= WrapForTmux("\<Esc>[?2004h")
+let &t_EI .= WrapForTmux("\<Esc>[?2004l")
+
+function! XTermPasteBegin()
+  set pastetoggle=<Esc>[201~
+  set paste
+  return ""
+endfunction
+
+inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
