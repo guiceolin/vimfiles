@@ -80,11 +80,6 @@ endif
 "hide buffers when not displayed
 set hidden
 
-""""""""""""""" INTERFACE CONFIG """"""""""""""""
-"set solarized colorscheme when running vim in gnome terminal
-silent! colorscheme solarized
-set guifont=Menlo\ for\ Powerline:h14
-
 """"""""""""""""" SHORTCUTS """""""""""""""""
 "key mapping for window navigation
 map <C-h> <C-w>h

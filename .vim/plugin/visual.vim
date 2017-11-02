@@ -1,4 +1,5 @@
 set background=dark
+set guifont=Menlo\ for\ Powerline:h14
 
 if has('nvim')
   colorscheme NeoSolarized
