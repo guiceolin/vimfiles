@@ -14,11 +14,9 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'regedarek/ZoomWin'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'ctrlp.vim'
-Plugin 'FelikZ/ctrlp-py-matcher'
-"Plugin 'mattboehm/vim-accordion'
-"Plugin 'majutsushi/tagbar'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 
 " TMUX
 "Plugin 'christoomey/vim-tmux-navigator'
@@ -33,8 +31,6 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'airblade/vim-gitgutter'
 
 " Commands
-Plugin 'junegunn/fzf'
-Plugin 'junegunn/fzf.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
@@ -56,8 +52,6 @@ Plugin 'honza/vim-snippets'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 
 " Language Additions
-" SLIM
-"Plugin 'slim-template/vim-slim'
 
 " Ruby
 "Plugin 'ngmy/vim-rubocop'
@@ -85,7 +79,6 @@ Plugin 'leshill/vim-json'
 Plugin 'itspriddle/vim-jquery'
 Plugin 'nono/vim-handlebars'
 Plugin 'digitaltoad/vim-jade'
-Plugin 'clacl/jasmine.vim'
 Plugin 'isRuslan/vim-es6'
 Plugin 'mxw/vim-jsx'
 

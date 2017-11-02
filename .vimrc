@@ -98,27 +98,6 @@ map <C-l> <C-w>l
 "key mapping for saving file
 silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
 
-"map to Ctrolp buffer explore
-nnoremap <leader>b :CtrlPBuffer<cr>
-
-"map to Ctrlp style finder
-nnoremap <leader>t :CtrlP<CR>
-"let g:ctrlp_show_hidden = 1
-"let g:ctrlp_custom_ignore = {
-"  \ 'dir':  '\v[\/]\.(git|hg|svn)$|\v[\/]vendor[\/]cache[\/]|\v[\/]node_modules[\/]',
-"  \ 'file': '\v.(swo)$',
-"  \ }
-let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
-let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
-      \ --ignore .git
-      \ --ignore .svn
-      \ --ignore .hg
-      \ --ignore .DS_Store
-      \ --ignore "**/*.pyc"
-      \ --ignore "vendor/cache"
-      \ --ignore "vendor/gems"
-      \ -g ""'
-let g:ctrlp_max_files=50000
 
 "map Q to something useful
 noremap Q gq
