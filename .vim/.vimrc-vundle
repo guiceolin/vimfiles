@@ -27,7 +27,11 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'Rykka/colorv.vim'
 "Plugin 'mattn/calendar-vim'
 Plugin 'itchyny/lightline.vim'
-Plugin 'altercation/vim-colors-solarized'
+if has('nvim')
+  Plugin 'iCyMind/NeoSolarized'
+else
+  Plugin 'altercation/vim-colors-solarized'
+endif
 Plugin 'airblade/vim-gitgutter'
 
 " Commands
