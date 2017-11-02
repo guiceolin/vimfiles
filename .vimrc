@@ -164,6 +164,8 @@ source ~/.vim/settings/neocomplete.vim
 " NeoSnippets
 source ~/.vim/settings/neosnippets.vim
 
+source ~/.vim/settings/fzf.vim
+
 augroup AutoSyntastic
   autocmd!
   autocmd BufWritePost *.c,*.cpp call s:syntastic()
