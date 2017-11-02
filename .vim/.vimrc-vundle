@@ -41,11 +41,9 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'w0rp/ale'
 
 " Snippets
-Plugin 'Shougo/neocomplete'
-Plugin 'Shougo/neosnippet'
-Plugin 'Shougo/neosnippet-snippets'
+Plugin 'Shougo/deoplete.nvim'
+Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'MarcWeber/vim-addon-mw-utils'
 
 " Language Additions
 
